@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
   "scripts": {
-    "build:dev": "node --max_old_space_size=4096 $(npm bin)/webpack --config ./webpack.config.dev.js --progress --mode development",
-    "build:prod": "node --max_old_space_size=4096 $(npm bin)/webpack --config ./webpack.config.prod.js --progress --mode production",
+    "build:dev": "webpack --config ./webpack.config.dev.js --progress --mode development",
+    "build:prod": "webpack --config ./webpack.config.prod.js --progress --mode production",
     "deploy:dev": "npm run build:dev && serverless deploy -v --stage dev",
     "deploy:prod": "npm run build:prod && serverless deploy -v --stage prod"
   },
