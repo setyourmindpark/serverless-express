@@ -1,4 +1,4 @@
-## SERVICE ENV
+## CONFIG SERVICE ENV
 $ vi config/env.config.dev.js    
 $ vi config/env.config.prod.js   
 ``` javascript
