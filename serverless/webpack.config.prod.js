@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const prodEnv = require('../config/env.config.prod');
 
 baseWebpack.output = Object.assign(baseWebpack.output, {
-    path: path.resolve(__dirname, './build/prod'),
+    path: path.resolve(__dirname, './build'),
     filename: 'prod.bundle.js'
 })
 

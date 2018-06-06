@@ -2,7 +2,7 @@
 service: jaehunpark
 provider:
   name: aws
-  stage: dev
+  stage: ${opt:stage, 'dev'}
   runtime: nodejs8.10
   credentials: ${file(./.env.yml):credentials}
   region: ap-northeast-2  
