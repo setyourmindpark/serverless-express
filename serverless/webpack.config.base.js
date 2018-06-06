@@ -7,9 +7,7 @@ module.exports = {
         warnings: false
     },    
     node: {
-        global: true,
-        __filename: true,
-        __dirname: true,
+        global: true        
     },
     output: {
         libraryTarget: 'umd'
@@ -23,7 +21,7 @@ module.exports = {
             {
                 test: /\.node$/,
                 use: 'node-loader'
-            }
+            },
         ],
     },
     plugins: [],
