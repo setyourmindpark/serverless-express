@@ -10,16 +10,14 @@ module.exports = {
     mode: '',
     base: {
         port: '',
-        logger: '',
-        db: '',
+        db: [],
         auth: '',
     },
     setting: {
-        upload: {
-            local: {                
-                assetDir: '',
-                saveDir: '',
-            },
+        logger: {
+            level: '',
+        },
+        upload: {            
             s3: {
                 accessKeyId: '',
                 secretAccessKey: '',
@@ -68,24 +66,7 @@ module.exports = {
             ios: {
 
             }
-        },
-        logger: {
-            local: {
-                level: '',
-                dir: '',
-                fileName: '',
-                timestamp: '',
-            },
-            fluentd: {
-                level: '',
-                host: '',
-                port: '',
-                timeout: '',
-                tag: '',
-            }
-
-        }
+        },        
     }
-
 }
 ```

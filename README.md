@@ -3,7 +3,7 @@ $ vi config/env.config.dev.js
 $ vi config/env.config.prod.js   
 ``` javascript
 module.exports = {
-    env: '',
+    mode: '',
     base: {
         port: '',
         db: [],
@@ -65,7 +65,6 @@ module.exports = {
         },        
     }
 }
-
 ```
 ## CONFIG AWS KEYS
 $ vi serverless/.env.yml
