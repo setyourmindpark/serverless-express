@@ -10,7 +10,7 @@ if (buildEnv) {
     let env = require('@root/config/env.config.dev');
     if (mode === 'prod') {
         env = require('@root/config/env.config.prod');
-    } else { }
+    }
     global.config = env;
 }
 
