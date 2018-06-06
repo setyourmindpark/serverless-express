@@ -77,8 +77,8 @@ credentials:
 ## BUILD & DEPLOY
 ``` bash
 $ cd serverless
-$ npm build:dev     # dev mode [ webpack build only ]
-$ npm build:prod    # prod mode [ webpack build only ]
-$ npm deploy:dev    # dev mode [ webpack build and deploy ]
-$ npm deploy:prod   # prod mode [ webpack build and deploy ]
+$ npm run build:dev     # dev mode [ webpack build only ]
+$ npm run build:prod    # prod mode [ webpack build only ]
+$ npm run deploy:dev    # dev mode [ webpack build and deploy ]
+$ npm run deploy:prod   # prod mode [ webpack build and deploy ]
 ```
