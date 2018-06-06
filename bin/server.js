@@ -14,7 +14,6 @@ if (buildEnv) {
     global.config = env;
 }
 
-
 const http = require('http');
 const cluster = require('cluster');
 const loggerHelper = require('@root/base/logger');
