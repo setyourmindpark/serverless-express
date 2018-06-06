@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "scripts": {
+    "build:dev": "node --max_old_space_size=4096 $(npm bin)/webpack --config ./webpack.config.dev.js --progress --mode development",
+    "build:prod": "node --max_old_space_size=4096 $(npm bin)/webpack --config ./webpack.config.prod.js --progress --mode production",
+    "deploy:dev": "npm run build:dev && serverless deploy -v --stage dev",
+    "deploy:prod": "npm run build:prod && serverless deploy -v --stage prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-serverless-express": "^3.2.0"
+  },
+  "devDependencies": {
+    "serverless": "^1.27.3",
+    "serverless-plugin-write-env-vars": "^1.0.2",
+    "serverless-webpack": "^5.1.5",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4",    
+    "babel-minify-webpack-plugin": "^0.3.1",    
+    "node-loader": "^0.6.0"
+  }
+}

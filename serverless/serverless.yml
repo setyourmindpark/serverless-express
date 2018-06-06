@@ -1,0 +1,19 @@
+# https://serverless.com/framework/docs/providers/aws/guide/serverless.yml
+service: jaehunpark
+provider:
+  name: aws
+  stage: dev
+  runtime: nodejs8.10
+  credentials: ${file(./.env.yml):credentials}
+  region: ap-northeast-2  
+  memorySize: 2048
+custom:
+  writeEnvVars:
+    NODE_ENV: ${file(./.env.yml)}
+plugins:
+  - serverless-plugin-write-env-vars  
+functions:
+  api:
+    handler: lambda.${self:provider.stage}Handler    
+    events:
+      - http: ANY {proxy+}
