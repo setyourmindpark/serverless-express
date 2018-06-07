@@ -1,7 +1,21 @@
-const { queryHelper, senderMail } = require('@root/app/common/modules');
 const response = require('@root/app/common/constant/response');
 const formatter = require('@root/app/common/formatter');
 const Promise = require('bluebird');
+
+exports.hello = () => {
+    return (req, res, next) => {
+        try {
+            res.send(formatter.apiResponse({
+                code: response.CODE_SERVICE_PROCESS_1,
+                data: {
+                    value: 'hello'
+                }
+            }));
+        } catch (err) {
+            res.status(500).send(err);
+        }
+    }
+}
 
 exports.path = () => {
     return (req, res, next) => {

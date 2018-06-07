@@ -5,14 +5,8 @@ const sampleController = require('./controller');
 const regExpEmail = /^[-a-z0-9~!$%^&*_=+}{\'?]+(\.[-a-z0-9~!$%^&*_=+}{\'?]+)*@([a-z0-9_][-a-z0-9_]*(\.[-a-z0-9_]+)*\.(aero|arpa|biz|com|coop|edu|gov|info|int|mil|museum|name|net|org|pro|travel|mobi|[a-z][a-z])|([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}))(:[0-9]{1,5})?$/i;
 
 router.get(
-    '/path/:param1',
-    assistant.validate({
-        params: {
-            param1: { v_type: 'onlyChar' }
-        }
-    }, message.customMessage()),
-    assistant.unifyAllProps(),
-    sampleController.path()
+    '/hello',
+    sampleController.hello()
 );
 
 //get 방식의 고전 querystring 방식 지원하기위해 예제를 작성함. query, post 의 body validate format과 같음
